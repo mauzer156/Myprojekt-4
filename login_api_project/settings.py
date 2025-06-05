@@ -8,7 +8,11 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', get_random_secret_key())
 
 DEBUG = os.getenv('DJANGO_DEBUG', 'False').lower() in ['true', '1', 'yes']
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost 127.0.0.1 myapp.onrender.com').split()
+ALLOWED_HOSTS = os.getenv(
+    'DJANGO_ALLOWED_HOSTS',
+    'localhost 127.0.0.1 myapp.onrender.com myprojekt-4.onrender.com'
+).split()
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
